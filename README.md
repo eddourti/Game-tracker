@@ -1,4 +1,4 @@
-# Edy's Game Tracker
+# Game Tracker
 
 Track every game you've started: status, % progress, rating, and notes on
 where you left off. Built for story-heavy backlogs but works for anything.
