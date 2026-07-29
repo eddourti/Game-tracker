@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Ultra&family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #080B14;
+  color: #EDEFF4;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #3B6BF6;
+  color: #EDEFF4;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #080B14;
+}
+::-webkit-scrollbar-thumb {
+  background: #232D45;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #323D58;
+}
+
+:focus-visible {
+  outline: 2px solid #3B6BF6;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Segmented "save-bar" progress meter */
+.save-bar {
+  --seg: 10;
+  display: grid;
+  grid-template-columns: repeat(var(--seg), 1fr);
+  gap: 2px;
+  height: 8px;
+  width: 100%;
+}
+.save-bar > div {
+  background: #1A2338;
+  border-radius: 2px;
+  transition: background-color 300ms ease;
+}
+.save-bar > div.filled {
+  background: var(--fill, #3B6BF6);
+}
+
+/* Achievement-style status tag */
+.stamp {
+  letter-spacing: 0.06em;
+}
+
+.glow-blue {
+  text-shadow: 0 0 20px rgba(59, 107, 246, 0.45);
+}
+.glow-gold {
+  text-shadow: 0 0 16px rgba(242, 193, 78, 0.4);
+}
+
+.hero-glow {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(59, 107, 246, 0.25), transparent 55%),
+    radial-gradient(circle at 90% 100%, rgba(242, 193, 78, 0.12), transparent 45%);
+}
